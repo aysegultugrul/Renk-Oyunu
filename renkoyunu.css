@@ -1,0 +1,81 @@
+body {
+	margin: 0;
+    background-color: black;
+}
+#baslikbar {
+	position: relative;
+	width: 100%;
+	height: 13vw;
+	background-color: blue;
+	transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+}
+.baslik {
+	position: relative;
+	margin: 0 auto;
+	width: 40%;
+	height: 13vw;
+	background-color: blue;
+	padding-top: 1%;
+	text-align: center;
+	color: white;
+	box-sizing: border-box;
+	font-size: 1.6vw;
+	font-weight: bold;
+	transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	cursor: default;
+}
+.renkkodu {
+	font-size: 4vw;
+}
+#navContainer {
+	position: relative;
+	width: 100%;
+	background-color: white;
+	color:steelblue;
+	height: 2.8vw;
+	text-align: center;
+	box-sizing: border-box;
+}
+#nav {
+	position: relative;
+	width: 40%;
+	height: 2.8vw;
+	background-color: white;
+	margin:0 auto;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-weight: bold;
+}
+.yeniRenk {
+	position: center;
+	background-color: white;
+	height: 5vw;
+	color: blue;
+	text-align: center;
+	font-size: 1.3vw;
+	padding-top: 0.4vw;
+}
+#container {
+	position: relative;
+	margin: 0 auto;
+	width: 60%;
+	background-color: black;
+	height: 30vw;
+	padding-left: 3vw;
+}
+.kutu {
+	position: relative;
+	margin: 1vw;
+	float: left;
+	width:25%; 
+	height: 13vw;
+	border-radius:10%;
+}
+.tekrardene {
+	position: absolute;
+	color: blue;
+	font-size: 1.3vw;
+	top: 0.4vw;
+}
