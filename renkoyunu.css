@@ -8,18 +8,18 @@ body {
 #baslikbar {
     width: 100%;
     background-color: steelblue;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     color: white;
-    transition: all 0.2s linear;
+    /* transition: all 0.2s linear; */
 }
 
 .baslik {
-    font-size: 1.8rem;
+    font-size: 25px;
     font-weight: bold;
 }
 
 .renkKodu {
-    font-size: 2.5rem;
+    font-size:62px;
     display: block;
     margin: 10px 0;
 }

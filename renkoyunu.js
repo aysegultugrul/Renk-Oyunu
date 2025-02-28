@@ -8,12 +8,14 @@ document.querySelector("#easy").addEventListener("click", function() {
     seviyeyiAyarla("easy");
     kutulariOlustur(3); 
     tekrardene.textContent = "";
+	window.location.hash="easy";
 });
 
 document.querySelector("#hard").addEventListener("click", function() {
     seviyeyiAyarla("hard");
     kutulariOlustur(6); 
     tekrardene.textContent = "";
+	window.location.hash="hard";
 });
 
 function kutulariOlustur(kutuSayisi) {
@@ -48,11 +50,22 @@ function kutulariOlustur(kutuSayisi) {
         kutuContainer.appendChild(kutu);
     }
     var x = parseInt(Math.random() * kutuSayisi);
-    renkKodu.textContent = kutular[x].style.background;
+    renkKodu.textContent = kutular[x].style.background.toUpperCase();
 }
 
 function seviyeyiAyarla(yeniSeviye) {
     console.log("Yeni seviye: " + yeniSeviye);
 }
-
-kutulariOlustur(3);
+function checkHash() {
+	if (window.location.hash === "#easy") {
+		kutulariOlustur(3);
+	} else {
+		kutulariOlustur(6);
+	}
+}
+window.onload = function () {
+	if (!window.location.hash) {
+		window.location.hash = "easy";
+	}
+	checkHash(); 
+};
