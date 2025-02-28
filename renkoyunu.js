@@ -50,7 +50,7 @@ function kutulariOlustur(kutuSayisi) {
         kutuContainer.appendChild(kutu);
     }
     var x = parseInt(Math.random() * kutuSayisi);
-    renkKodu.textContent = kutular[x].style.background.toUpperCase();
+    renkKodu.textContent = kutular[x].style.background;
 }
 
 function seviyeyiAyarla(yeniSeviye) {

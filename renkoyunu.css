@@ -8,9 +8,9 @@ body {
 #baslikbar {
     width: 100%;
     background-color: steelblue;
-    /* padding: 20px 0; */
+    padding: 20px 0;
     color: white;
-    /* transition: all 0.2s linear; */
+    transition: all 0.2s linear;
 }
 
 .baslik {
