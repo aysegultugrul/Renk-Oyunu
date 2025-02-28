@@ -1,81 +1,76 @@
 body {
-	margin: 0;
-    background-color: black;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #232323;
+    text-align: center;
 }
+
 #baslikbar {
-	position: relative;
-	width: 100%;
-	height: 13vw;
-	background-color: blue;
-	transition: all 0.2s linear;
-	-webkit-transition: all 0.2s linear;
+    width: 100%;
+    background-color: steelblue;
+    padding: 20px 0;
+    color: white;
+    transition: all 0.2s linear;
 }
+
 .baslik {
-	position: relative;
-	margin: 0 auto;
-	width: 40%;
-	height: 13vw;
-	background-color: blue;
-	padding-top: 1%;
-	text-align: center;
-	color: white;
-	box-sizing: border-box;
-	font-size: 1.6vw;
-	font-weight: bold;
-	transition: all 0.2s linear;
-	-webkit-transition: all 0.2s linear;
-	cursor: default;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
-.renkkodu {
-	font-size: 4vw;
+
+.renkKodu {
+    font-size: 2.5rem;
+    display: block;
+    margin: 10px 0;
 }
+
 #navContainer {
-	position: relative;
-	width: 100%;
-	background-color: white;
-	color:steelblue;
-	height: 2.8vw;
-	text-align: center;
-	box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0;
 }
+
 #nav {
-	position: relative;
-	width: 40%;
-	height: 2.8vw;
-	background-color: white;
-	margin:0 auto;
-	box-sizing: border-box;
-	overflow: hidden;
-	font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-.yeniRenk {
-	position: center;
-	background-color: white;
-	height: 5vw;
-	color: blue;
-	text-align: center;
-	font-size: 1.3vw;
-	padding-top: 0.4vw;
+
+.yeniRenk, #easy, #hard {
+    background: white;
+    color: steelblue;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.2s;
+	display: inline-block;
 }
-#container {
+
+
+#kutu-container {
 	position: relative;
 	margin: 0 auto;
 	width: 60%;
-	background-color: black;
+	background-color: #232323;
 	height: 30vw;
 	padding-left: 3vw;
 }
+
 .kutu {
-	position: relative;
+    position: relative;
 	margin: 1vw;
 	float: left;
 	width:25%; 
 	height: 13vw;
 	border-radius:10%;
+	transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
 }
-.tekrardene {
-	position: absolute;
-	color: blue;
-	font-size: 1.3vw;
-	top: 0.4vw;
+
+.kutu:hover {
+    transform: scale(1.1);
 }
