@@ -101,3 +101,11 @@ body {
     transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
 }
+.tekrardene{
+    position: absolute;
+	left: 40%;
+	color: steelblue;
+	font-weight: bold;
+	font-size: 1.3vw;
+	top: 0.4vw;
+}
