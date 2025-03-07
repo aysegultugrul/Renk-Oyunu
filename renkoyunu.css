@@ -14,63 +14,90 @@ body {
 }
 
 .baslik {
-    font-size: 25px;
+    position: relative;
+    margin: 0 auto;
+    width: 40%;
+    height: 13vw;
+    background-color: steelblue;
+    padding-top: 2%;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    font-size: 1.6vw;
     font-weight: bold;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    cursor: default;
 }
 
 .renkKodu {
-    font-size:62px;
-    display: block;
-    margin: 10px 0;
+    font-size: 4vw;
 }
 
 #navContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 100%;
     background-color: white;
-    padding: 10px 0;
+    color: steelblue;
+    height: 2.8vw;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 #nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    position: relative;
+    width: 40%;
+    height: 2.8vw;
+    background-color: white;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-weight: bold;
 }
 
-.yeniRenk, #easy, #hard {
+.yeniRenk {
+    position: relative;
+    float: left;
+    background-color: white;
+    width: 25%;
+    height: 2.8vw;
+    color: steelblue;
+    text-align: center;
+    font-size: 1.3vw;
+    padding-top: 0.4vw;
+    transition: all 0.2s linear;
+}
+
+#easy,#hard {
+    float: right;
     background: white;
     color: steelblue;
     border: none;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.3vw;
     cursor: pointer;
     padding: 10px 15px;
     transition: 0.2s;
-	display: inline-block;
+    display: inline-block;
+
 }
 
 
 #kutu-container {
-	position: relative;
-	margin: 0 auto;
-	width: 60%;
-	background-color: #232323;
-	height: 30vw;
-	padding-left: 3vw;
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    background-color: #232323;
+    height: 30vw;
+    padding-left: 3vw;
 }
 
 .kutu {
     position: relative;
-	margin: 1vw;
-	float: left;
-	width:25%; 
-	height: 13vw;
-	border-radius:10%;
-	transition: all 0.2s linear;
-	-webkit-transition: all 0.2s linear;
-}
-
-.kutu:hover {
-    transform: scale(1.1);
+    margin: 1vw;
+    float: left;
+    width: 25%;
+    height: 13vw;
+    border-radius: 10%;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
 }
