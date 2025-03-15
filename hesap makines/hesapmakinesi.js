@@ -1,23 +1,22 @@
-let display = document.getElementById("display");
-
 function appendCharacter(char) {
-    display.value += char;
+    document.getElementById("display").value += char;
 }
 
 function clearDisplay() {
-    display.value = "";
+    document.getElementById("display").value = "";
 }
 
 function calculateResult() {
+    const display = document.getElementById("display");
+
     try {
-        let input = display.value;
-        let numbers = input.split(/[\+\-\*\/]/);
-        if (numbers.length > 2) {
-            display.value = "Error Sadece İki Sayi!";
-        } else {
-            display.value = eval(input);
+        let result = eval(display.value);
+
+        if (result === Infinity || result === -Infinity) {
+            throw new Error("Sıfıra bölünmez");
         }
-    } catch (e) {
-        display.value = "Error";
+        display.value = result;
+    } catch (error) {
+        display.value = "Hata: " + error.message;
     }
 }
