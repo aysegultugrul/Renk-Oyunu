@@ -1,3 +1,7 @@
+:root {
+    --ana-renk: #1a5c8f;
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -7,7 +11,7 @@ body {
 
 #baslikbar {
     width: 100%;
-    background-color: steelblue;
+    background-color: var(--ana-renk);
     padding: 20px 0;
     color: white;
     transition: all 0.2s linear;
@@ -18,8 +22,8 @@ body {
     margin: 0 auto;
     width: 40%;
     height: 13vw;
-    background-color: steelblue;
-    padding-top: 2%;
+    background-color: var(--ana-renk);
+    padding-top: 1%;
     text-align: center;
     color: white;
     box-sizing: border-box;
@@ -38,8 +42,8 @@ body {
     position: relative;
     width: 100%;
     background-color: white;
-    color: steelblue;
-    height: 2.8vw;
+    color: var(--ana-renk);
+    height: auto;
     text-align: center;
     box-sizing: border-box;
 }
@@ -47,43 +51,69 @@ body {
 #nav {
     position: relative;
     width: 40%;
-    height: 2.8vw;
     background-color: white;
     margin: 0 auto;
     box-sizing: border-box;
-    overflow: hidden;
     font-weight: bold;
+    height: auto;
+    overflow: visible;
+    display: flex;
+    align-items: center;
 }
 
 .yeniRenk {
-    position: relative;
-    float: left;
+    flex: 1;
     background-color: white;
-    width: 25%;
-    height: 2.8vw;
-    color: steelblue;
-    text-align: center;
+    color: var(--ana-renk);
+    text-align: left;
     font-size: 1.3vw;
-    padding-top: 0.4vw;
+    padding: 0.5vw 0;
     transition: all 0.2s linear;
+    white-space: nowrap;
+    cursor: pointer;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
-#easy,#hard {
-    float: right;
+.yeniRenk:hover {
+    opacity: 0.75;
+}
+
+.tekrardene {
+    flex: 1;
+    color: var(--ana-renk);
+    font-weight: bold;
+    font-size: 1.3vw;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-buttons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#easy, #hard {
     background: white;
-    color: steelblue;
+    color: var(--ana-renk);
     border: none;
     font-size: 1.3vw;
     cursor: pointer;
     padding: 10px 15px;
     transition: 0.2s;
     display: inline-block;
-}
-#easy{
-    background: steelblue;
-    color: white;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
+#easy.active, #hard.active {
+    background: var(--ana-renk);
+    color: white;
+}
 
 #kutu-container {
     position: relative;
@@ -104,11 +134,99 @@ body {
     transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
 }
-.tekrardene{
-    position: absolute;
-	left: 40%;
-	color: steelblue;
-	font-weight: bold;
-	font-size: 1.3vw;
-	top: 0.4vw;
+
+/* ── Tablet (max 768px) ── */
+@media (max-width: 768px) {
+    .baslik {
+        width: 80%;
+        height: auto;
+        min-height: 80px;
+        font-size: 3.5vw;
+        padding: 12px;
+    }
+
+    .renkKodu {
+        font-size: 8vw;
+    }
+
+    #nav {
+        width: 90%;
+        padding: 6px 0;
+    }
+
+    .yeniRenk {
+        font-size: 2.8vw;
+    }
+
+    .tekrardene {
+        font-size: 2.8vw;
+    }
+
+    #easy, #hard {
+        font-size: 2.8vw;
+        padding: 8px 12px;
+    }
+
+    #kutu-container {
+        width: 90%;
+        height: auto;
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .kutu {
+        width: 40%;
+        height: 22vw;
+        margin: 2vw;
+    }
+}
+
+/* ── Mobile (max 480px) ── */
+@media (max-width: 480px) {
+    .baslik {
+        width: 95%;
+        font-size: 5vw;
+        min-height: 70px;
+    }
+
+    .renkKodu {
+        font-size: 11vw;
+    }
+
+    #nav {
+        width: 100%;
+        padding: 6px 8px;
+        gap: 4px;
+    }
+
+    .yeniRenk {
+        font-size: 3.5vw;
+    }
+
+    .tekrardene {
+        font-size: 3.5vw;
+    }
+
+    #easy, #hard {
+        font-size: 3.5vw;
+        padding: 6px 10px;
+    }
+
+    #kutu-container {
+        width: 100%;
+        padding: 0 8px 20px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .kutu {
+        width: 42%;
+        height: 28vw;
+        margin: 3vw 4%;
+    }
 }

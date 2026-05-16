@@ -55,11 +55,15 @@ function kutulariOlustur(kutuSayisi) {
 
 function seviyeyiAyarla(yeniSeviye) {
     console.log("Yeni seviye: " + yeniSeviye);
+    document.querySelector("#easy").classList.toggle("active", yeniSeviye === "easy");
+    document.querySelector("#hard").classList.toggle("active", yeniSeviye === "hard");
 }
 function checkHash() {
 	if (window.location.hash === "#easy") {
+        seviyeyiAyarla("easy");
 		kutulariOlustur(3);
 	} else {
+        seviyeyiAyarla("hard");
 		kutulariOlustur(6);
 	}
 }

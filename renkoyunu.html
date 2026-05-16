@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
     <title>Renk Oyunu</title>
+    <meta name="description" content="RGB renk kodunu tahmin etmeye çalış! Kolay ve zor modlarıyla eğlenceli renk tahmin oyunu.">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="renkoyunu.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="baslikbar">
-        <div class="baslik"><span>THE GREAT</span><br><span class="renkKodu">16.13.273</span>
-            <br><span>COLOR GAME</span>
+    <header id="baslikbar">
+        <div class="baslik">
+            <span>THE GREAT</span>
+            <br>
+            <span>COLOR GAME</span>
+            <br>
+            <span class="renkKodu">16.13.273</span>
         </div>
-    </div>
-    <div id="navContainer">
+    </header>
+    <nav id="navContainer" aria-label="Oyun kontrolleri">
         <div id="nav">
-            <a href='javascript:location.reload();'><div class="yeniRenk">YENİ RENK</div></a> 
-            <span class="tekrardene"></span>
-            <button id="easy" class="easy">Kolay</button>
-            <button id="hard" class="hard">Zor</button>
+            <button class="yeniRenk" id="yeniRenkBtn" onclick="location.reload()" type="button">
+                YENİ RENK
+            </button>
+            <span class="tekrardene" aria-live="polite"></span>
+            <div class="nav-buttons">
+                <button id="easy" class="easy" type="button">Kolay</button>
+                <button id="hard" class="hard" type="button">Zor</button>
+            </div>
         </div>
-    </div>
-    <div id="kutu-container"></div>
+    </nav>
+    <main>
+        <div id="kutu-container"></div>
+    </main>
     <script src="renkoyunu.js"></script>
 </body>
 </html>
